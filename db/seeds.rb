@@ -13,7 +13,7 @@ users = [
     :name => "Brometheus",
     :avatar => "http://24.media.tumblr.com/tumblr_m5b2mkol1X1rq3e2ho1_500.png"
   },
-  { :url => "Broseidon",
+  { :name => "Broseidon",
     :avatar => "http://th00.deviantart.net/fs51/PRE/i/2009/273/c/f/Broseidon_by_omegalbagel.jpg"
   }
 ]
