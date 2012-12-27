@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @vital.user_id %>
+</p>
+
+<p>
+  <b>Hp:</b>
+  <%= @vital.hp %>
+</p>
+
+<p>
+  <b>Mp:</b>
+  <%= @vital.mp %>
+</p>
+
+<p>
+  <b>Sp:</b>
+  <%= @vital.sp %>
+</p>
+
+
+<%= link_to 'Edit', edit_vital_path(@vital) %> |
+<%= link_to 'Back', vitals_path %>

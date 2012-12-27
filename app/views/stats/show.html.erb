@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @stat.user_id %>
+</p>
+
+<p>
+  <b>Str:</b>
+  <%= @stat.str %>
+</p>
+
+<p>
+  <b>Dex:</b>
+  <%= @stat.dex %>
+</p>
+
+<p>
+  <b>Con:</b>
+  <%= @stat.con %>
+</p>
+
+<p>
+  <b>Intel:</b>
+  <%= @stat.intel %>
+</p>
+
+<p>
+  <b>Wis:</b>
+  <%= @stat.wis %>
+</p>
+
+<p>
+  <b>Cha:</b>
+  <%= @stat.cha %>
+</p>
+
+
+<%= link_to 'Edit', edit_stat_path(@stat) %> |
+<%= link_to 'Back', stats_path %>

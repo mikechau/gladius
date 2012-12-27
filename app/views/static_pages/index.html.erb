@@ -1,0 +1,31 @@
+<h1>BRODOWN TIME</h1>
+<hr />
+
+<ul>
+  <img src="<%= @user.first.avatar %>" height="300" /><br />
+  <b>Brogod: <%= @user.first.name %></b>
+  <li>HP: <%= @user.first.vital.hp %></li>
+  <% if @user.first.battles.first.turn %>
+    <li><%= link_to "Attack #{@user.second.name}", {:controller => 'static_pages', :action => 'attack'}, :method => :put %></li>
+  <% else %>
+    <li>Waiting for attack...</li>
+  <% end %>
+</ul>
+
+<hr />
+
+<ul>
+  <img src="<%= @user.second.avatar%>" height="300" /><br />
+  <b>Brogod: <%= @user.second.name %></b>
+  <li>HP: <%= @user.second.vital.hp %></li>
+  <% if @user.first.battles.first.turn == false %>
+    <li><%= link_to "Attack #{@user.first.name}", {:controller => 'static_pages', :action => 'attack'}, :method => :put %></li>
+  <% else %>
+    <li>Waiting for attack...</li>
+  <% end %>
+</ul>
+
+<hr />
+DEBUG:
+<ul>
+</ul>

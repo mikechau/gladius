@@ -1,0 +1,27 @@
+<h1>Listing battles</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Turn</th>
+    <th>Challenger</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @battles.each do |battle| %>
+  <tr>
+    <td><%= battle.user_id %></td>
+    <td><%= battle.turn %></td>
+    <td><%= battle.challenger %></td>
+    <td><%= link_to 'Show', battle %></td>
+    <td><%= link_to 'Edit', edit_battle_path(battle) %></td>
+    <td><%= link_to 'Destroy', battle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Battle', new_battle_path %>
