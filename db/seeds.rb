@@ -78,7 +78,7 @@ Battle.destroy_all
 battles = [
   {
     :user_id => 1,
-    :turn => true
+    :turn => true,
     :challenger_id => 2,
     :damage_counter => 0,
     :heal_counter => 0
