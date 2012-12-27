@@ -11,6 +11,7 @@ Gladius::Application.routes.draw do
   resources :users
 
   root :to => 'static_pages#index'
+  get '/attack' => 'static_pages#attack'
   put '/attack' => 'static_pages#attack'
 
   # The priority is based upon order of creation:
