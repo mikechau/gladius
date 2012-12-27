@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<nav>New: <%= link_to 'New Fighter', new_user_url %> || <%= link_to 'Create Stats', new_stat_url %> || <%= link_to 'Load Vitals', new_vital_url %> || <%= link_to 'Generate Battle' %></nav>
+<nav>Lists: <%= link_to 'Fighters', users_url %></nav>
+<nav>Main: <%= link_to 'Index', root_url %></nav>
+<hr />
+
 <%= yield %>
 
 </body>
