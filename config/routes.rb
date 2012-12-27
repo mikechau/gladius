@@ -14,6 +14,9 @@ Gladius::Application.routes.draw do
   get '/attack' => 'static_pages#attack'
   put '/attack' => 'static_pages#attack'
 
+  get '/heal' => 'static_pages#heal'
+  put '/heal' => 'static_pages#heal'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -7,6 +7,7 @@
   <li>HP: <%= @user.first.vital.hp %></li>
   <% if @user.first.battles.first.turn %>
     <li><%= link_to "Attack #{@user.second.name}", {:controller => 'static_pages', :action => 'attack'}, :method => :put %></li>
+    <li><%= link_to "Recover", {:controller => 'static_pages', :action => 'heal'}, :method => :put %></li>
   <% else %>
     <li>Waiting for attack...</li>
   <% end %>
@@ -20,9 +21,17 @@
   <li>HP: <%= @user.second.vital.hp %></li>
   <% if @user.first.battles.first.turn == false %>
     <li><%= link_to "Attack #{@user.first.name}", {:controller => 'static_pages', :action => 'attack'}, :method => :put %></li>
+    <li><%= link_to "Recover", {:controller => 'static_pages', :action => 'heal'}, :method => :put %></li>
   <% else %>
     <li>Waiting for attack...</li>
   <% end %>
 </ul>
 
 <hr />
+
+DEBUG LOG:
+<ul>
+  <li><%= @attacker.name %> deals <span style="color:red;">-<%= @battle.damage_counter %> DMG</span> to <%= @hit_user.name %></li>
+  <li><%= @attacker.name %> recovers <span style="color:green;">+<%= @battle.heal_counter %> HP</span></li>
+  <li>Current Turn: <%= @hit_user.name %>
+</ul>
